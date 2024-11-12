@@ -1,0 +1,11 @@
+/* Responsividade - Estilos para o rodapé */
+.Footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    /* Garante que o rodapé fique sempre no final da tela */
+    width: 100%;
+    /* Faz com que o rodapé ocupe toda a largura */
+  }

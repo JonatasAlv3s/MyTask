@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+/* Reset de margens e paddings, além de garantir box-sizing correto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Definindo o fundo do body e garantindo que ocupe 100% da altura da tela */
+html,
+body,
+#root {
+  background-color: lightgray;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para a área de conteúdo */
+.content {
+  padding: 20px;
+  margin-top: 0;
+  background-color: #f9f9f9;
+  flex: 1;
+  /* Garante que o conteúdo ocupe o restante da tela disponível */
+  display: grid;
+  gap: 20px;
+  /* Espaço entre as colunas */
+}
+
+/* Suporte para colunas no layout */
+@media (min-width: 768px) {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Cria duas colunas em telas maiores */
+    gap: 20px;
+    /* Espaço entre as colunas */
+  }
+}
+
+/* Suporte para três colunas em telas grandes */
+@media (min-width: 1024px) {
+  .content {
+    grid-template-columns: repeat(3, 1fr);
+    /* Cria três colunas em telas grandes */
+  }
+}

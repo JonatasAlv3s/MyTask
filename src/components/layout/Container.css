@@ -1,0 +1,34 @@
+/* Container geral com largura máxima e centralização */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Largura máxima, mantendo o design adaptável */
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 20px; /* Adicionando padding para criar espaço interno */
+}
+
+/* Garantir que o container tenha altura mínima de 100vh */
+.min-height {
+    min-height: 100vh;
+}
+
+/* Ajuste de alinhamento - alinhamento à esquerda */
+.start {
+    justify-content: flex-start;
+}
+
+/* Suporte para layouts responsivos */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column; /* Coloca os itens em uma única coluna em telas menores */
+        align-items: center; /* Centraliza os itens */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Reduz padding para telas menores */
+    }
+}
